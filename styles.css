@@ -1,0 +1,407 @@
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem auto;
+  gap: 3rem;
+  max-width: 600px;
+  padding: 0 1rem;
+}
+
+/* ------------------- STANDARD INPUT STYLES ---------------------- */
+
+.mui-standard-input-wrapper {
+  --mfg-mui-error-color: #e51212;
+  --mfg-mui-disabled-color: #00000061;
+  --mfg-sm-label-size: 0.75rem;
+  --mfg-label-pb-size: 2px;
+}
+
+.mui-standard-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.mui-standard-input {
+  position: relative;
+  width: 100%;
+}
+
+.mui-standard-input-helper-text {
+  margin: 0.4rem 0;
+  font-size: 0.875rem;
+}
+
+.mui-standard-input input {
+  color: #333333;
+  height: 2rem;
+  border: none;
+  border-bottom: 1px solid #ffffff3b;
+  /* background-color: var(--main-dark-grey); */
+  padding-left: 0px;
+  font-size: 16px;
+  transition: 0.1s #ffffff3b;
+  outline: none;
+  box-sizing: border-box;
+  background-color: inherit;
+
+  width: 100%;
+}
+
+.mui-standard-input label {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+  color: #667085;
+  text-align: center;
+  transition: 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+  font-size: 1rem;
+  pointer-events: none;
+  padding: 0 0px;
+  padding-bottom: 10px;
+}
+
+.mui-standard-input input:not(:placeholder-shown) ~ label,
+.mui-standard-input input:focus ~ label {
+  top: -10px;
+  left: 0px;
+  font-size: var(--mfg-sm-label-size);
+  padding-bottom: var(--mfg-label-pb-size);
+}
+
+.mui-standard-input .mui-input-underline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: scaleX(1);
+  transition: transform 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+  border-bottom: 2px solid var(--secondary);
+}
+
+.mui-standard-input input {
+  border-bottom: 2px solid var(--secondary);
+}
+.mui-standard-input input:focus ~ label {
+  color: var(--secondary) !important;
+  font-size: var(--mfg-sm-label-size);
+  padding-bottom: var(--mfg-label-pb-size);
+}
+
+/* Error state */
+
+.mui-standard-input-wrapper.mui-standard-input-error
+  .mui-standard-input-helper-text {
+  color: var(--mfg-mui-error-color) !important;
+}
+.mui-standard-input-wrapper.mui-standard-input-error input {
+  border-bottom: 2px solid var(--mfg-mui-error-color);
+}
+.mui-standard-input-wrapper.mui-standard-input-error label {
+  color: var(--mfg-mui-error-color) !important;
+}
+.mui-standard-input-wrapper.mui-standard-input-error input:focus ~ label {
+  color: var(--mfg-mui-error-color) !important;
+  font-size: var(--mfg-sm-label-size);
+  padding-bottom: var(--mfg-label-pb-size);
+}
+.mui-standard-input-wrapper.mui-standard-input-error .mui-input-underline {
+  border-bottom: 2px solid var(--mfg-mui-error-color);
+}
+
+/* Disabled state*/
+
+.mui-standard-input-wrapper.mui-standard-input-disabled
+  .mui-standard-input-helper-text {
+  color: var(--mfg-mui-disabled-color) !important;
+}
+.mui-standard-input-wrapper.mui-standard-input-disabled input {
+  border-bottom: 2px dotted var(--mfg-mui-disabled-color);
+  color: var(--mfg-mui-disabled-color);
+}
+.mui-standard-input-wrapper.mui-standard-input-disabled label {
+  color: var(--mfg-mui-disabled-color) !important;
+}
+.mui-standard-input-wrapper.mui-standard-input-disabled input:focus ~ label {
+  color: var(--mfg-mui-disabled-color) !important;
+  font-size: var(--mfg-sm-label-size);
+  padding-bottom: var(--mfg-label-pb-size);
+}
+.mui-standard-input-wrapper.mui-standard-input-disabled .mui-input-underline {
+  border-bottom: 2px dotted var(--mfg-mui-disabled-color);
+}
+
+/* ------------------- END OF STANDARD INPUT STYLES ---------------------- */
+
+*
+  -------------------
+  MUI
+  CHECKBOX
+  STYLES
+  ----------------------
+  */
+  .mui-checkbox-wrapper {
+  width: 100%;
+}
+
+.mui-checkbox * {
+  box-sizing: border-box;
+}
+
+.mui-checkbox {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.mui-checkbox::before,
+.mui-checkbox::after {
+  box-sizing: border-box;
+}
+
+.mui-checkbox input {
+  position: relative;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  color: #363839;
+  border: 1px solid #bdc1c6;
+  border-radius: 4px;
+  appearance: none;
+  outline: 0;
+  cursor: pointer;
+  transition: background 175ms cubic-bezier(0.1, 0.1, 0.25, 1);
+  margin-right: 0.5rem;
+}
+.mui-checkbox input::before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 2px;
+  left: 8px;
+  width: 4px;
+  height: 14px;
+  border-style: solid;
+  border-color: #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+}
+.mui-checkbox input:checked {
+  color: #fff;
+  border-color: var(--secondary);
+  background: var(--secondary);
+}
+.mui-checkbox input:checked::before {
+  opacity: 1;
+}
+.mui-checkbox input:checked ~ label::before {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.mui-checkbox label {
+  position: relative;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0 0.25em 0;
+  user-select: none;
+}
+
+.mui-checkbox-helper-text {
+  margin: 0.5rem 0;
+  font-size: 0.875rem;
+}
+
+.mui-checkbox-error .mui-checkbox-helper-text {
+  color: #e51212;
+}
+
+/* ------------------- END OF CHECKBOX STYLES ---------------------- */
+
+/* ------------------- MUI Switch STYLES ---------------------- */
+
+.mui-switch-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.mui-switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  min-width: 53px;
+  height: 28px;
+}
+
+.mui-switch input {
+  opacity: 1;
+  width: 0;
+  height: 0;
+}
+
+.mui-switch-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  background: gray;
+  transition: 0.4s;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+}
+
+.mui-switch-slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 16px;
+  left: 1.4px;
+  top: 1px;
+  bottom: 0;
+  background-color: white;
+  box-shadow: 0 2px 5px #999999;
+  transition: 0.4s;
+}
+
+.mui-switch input:checked + .mui-switch-slider {
+  background-color: var(--secondary);
+  border: 1px solid transparent;
+}
+
+.mui-switch input:checked + .mui-switch-slider:before {
+  transform: translateX(1.4em);
+}
+
+.mui-switch-label {
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+/* ------------------- END OF MUI SWITCH STYLES ---------------------- */
+
+/* ------------------- SELECT INPUT STYLES ---------------------- */
+
+.mui-select-input-wrapper {
+  --mfg-sm-label-size: 0.75rem;
+  --mfg-label-pb-size: 2px;
+}
+
+.mui-select-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.mui-select-input {
+  position: relative;
+  width: 100%;
+}
+
+.mui-select-input-helper-text {
+  margin: 0.4rem 0;
+  font-size: 0.875rem;
+}
+
+.mui-select-input svg {
+  position: absolute;
+  top: 4px;
+  left: 0;
+}
+
+.mui-select-input input {
+  color: #333333;
+  height: 2rem;
+  border: none;
+  border-bottom: 1px solid #ffffff3b;
+  /* background-color: var(--main-dark-grey); */
+  padding-left: 30px;
+  font-size: 16px;
+  transition: 0.1s #ffffff3b;
+  outline: none;
+  box-sizing: border-box;
+  background-color: inherit;
+
+  width: 100%;
+  position: relative;
+}
+
+.mui-select-input label {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  color: #667085;
+  text-align: center;
+  transition: 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+  font-size: 1rem;
+  pointer-events: none;
+  padding: 0 0px;
+  padding-bottom: 10px;
+}
+
+.mui-select-input input:not(:placeholder-shown) ~ label,
+.mui-select-input input:focus ~ label {
+  top: -10px;
+  left: 0px;
+  font-size: var(--mfg-sm-label-size);
+  padding-bottom: var(--mfg-label-pb-size);
+}
+
+.mui-select-input .mui-input-underline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: scaleX(1);
+  transition: transform 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+  border-bottom: 2px solid var(--secondary);
+}
+
+.mui-select-input input {
+  border-bottom: 2px solid var(--secondary);
+}
+.mui-select-input input:focus ~ label {
+  color: var(--secondary) !important;
+  font-size: var(--mfg-sm-label-size);
+  padding-bottom: var(--mfg-label-pb-size);
+}
+
+/* Drop down */
+
+.mfg-autocomplete-items {
+  position: absolute;
+  /* border: 1px solid #d4d4d4; */
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 0px 0px 4px 4px;
+
+  max-height: 250px;
+  overflow-y: auto;
+}
+.mfg-autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  /* border-bottom: 1px solid #d4d4d4; */
+}
+.mfg-autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #e9e9e9;
+}
+.mfg-autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: #e9e9e9 !important;
+}
+
+/* ------------------- END OF SELECT INPUT STYLES ---------------------- */

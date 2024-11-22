@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="liferay-styles.css" />
+    <script src="autocomplete-input.js" defer></script>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <div class="mui-select-input-wrapper">
+        <div class="mui-select-input">
+          <svg
+            stroke="currentColor"
+            fill="#667085"
+            stroke-width="0"
+            viewBox="0 0 512 512"
+            height="16px"
+            width="16px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+            ></path>
+          </svg>
+          <input type="text" id="myCode" name="myCode" placeholder=" " />
+          <label for="myCode">My Code</label>
+        </div>
+      </div>
+      <div class="mui-standard-input-wrapper mui-standard-input-disabled">
+        <div class="mui-standard-input">
+          <input
+            type="text"
+            id="derivedName"
+            name="derivedName"
+            placeholder=" "
+            disabled
+          />
+          <label for="derivedName">Derived Name</label>
+          <span class="mui-input-underline"></span>
+        </div>
+        <p class="mui-standard-input-helper-text">hl</p>
+      </div>
+      <!-- Other -->
+      <div class="mui-standard-input-wrapper">
+        <div class="mui-standard-input">
+          <input type="text" name="lastName" placeholder=" " />
+          <label for="lastName">Last name</label>
+          <span class="mui-input-underline"></span>
+        </div>
+        <p class="mui-standard-input-helper-text">
+          Lorem ipsum dolor sit amet consectetur.
+        </p>
+      </div>
+      <div class="mui-standard-input-wrapper">
+        <div class="mui-standard-input">
+          <input type="text" name="contactName" placeholder=" " />
+          <label for="contactName">Contact name</label>
+          <span class="mui-input-underline"></span>
+        </div>
+      </div>
+      <div class="mui-standard-input-wrapper mui-standard-input-error">
+        <div class="mui-standard-input">
+          <input type="text" name="signature" placeholder=" " />
+          <label for="signature">Signature</label>
+          <span class="mui-input-underline"></span>
+        </div>
+        <p class="mui-standard-input-helper-text">
+          Lorem ipsum dolor sit amet.
+        </p>
+      </div>
+      <div class="mui-standard-input-wrapper mui-standard-input-disabled">
+        <div class="mui-standard-input">
+          <input
+            type="text"
+            name="mydate"
+            placeholder=" "
+            disabled
+            value="Jan/08/24"
+          />
+          <label for="mydate">Current Date</label>
+          <span class="mui-input-underline"></span>
+        </div>
+      </div>
+      <div class="mui-checkbox-wrapper">
+        <div class="mui-checkbox">
+          <input type="checkbox" id="terms" name="terms" value="todo" />
+          <label for="terms"
+            >I agree that the X has completed all minimum requirements for
+            participation in Y Program</label
+          >
+        </div>
+      </div>
+      <div class="mui-checkbox-wrapper mui-checkbox-error">
+        <div class="mui-checkbox">
+          <input type="checkbox" id="terms2" name="terms2" value="todo" />
+          <label for="terms2"
+            >I agree that the X has completed all minimum requirements for
+            participation in Y Program</label
+          >
+        </div>
+        <p class="mui-checkbox-helper-text">Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="mui-switch-wrapper">
+        <label class="mui-switch">
+          <input type="checkbox" id="sendCopy" name="sendCopy" />
+          <span class="mui-switch-slider"></span>
+        </label>
+        <label class="mui-switch-label" for="sendCopy"
+          >Lorem ipsum dolor sit amet. Lorem, ipsum.</label
+        >
+      </div>
+    </div>
+  </body>
+</html>
