@@ -224,6 +224,7 @@
 .mui-switch-wrapper {
   display: flex;
   width: 100%;
+  align-items: center;
 }
 
 .mui-switch {
