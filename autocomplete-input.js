@@ -1,4 +1,4 @@
-const OPTIONS_LIMIT = 5;
+const OPTIONS_LIMIT = 5; // Deprecated in favor of fixed height
 
 function zipArraysToObject(keys, values) {
   const result = {};

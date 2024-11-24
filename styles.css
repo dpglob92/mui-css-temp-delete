@@ -136,14 +136,9 @@
 
 /* ------------------- END OF STANDARD INPUT STYLES ---------------------- */
 
-*
-  -------------------
-  MUI
-  CHECKBOX
-  STYLES
-  ----------------------
-  */
-  .mui-checkbox-wrapper {
+/* ------------------- MUI CHECKBOX STYLES ---------------------- */
+
+.mui-checkbox-wrapper {
   width: 100%;
 }
 
