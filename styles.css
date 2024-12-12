@@ -234,6 +234,7 @@
   opacity: 1;
   width: 0;
   height: 0;
+  display: none;
 }
 
 .mui-switch-slider {

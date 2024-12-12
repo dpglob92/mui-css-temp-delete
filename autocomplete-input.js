@@ -1,4 +1,4 @@
-const OPTIONS_LIMIT = 5; // Deprecated in favor of fixed height
+var OPTIONS_LIMIT = 5; // Deprecated in favor of fixed height
 
 function zipArraysToObject(keys, values) {
   const result = {};
@@ -51,7 +51,6 @@ function mfgHotelCodeAutocomplete(
 
     // if there is not options
     if (currentOptions.length === 0) {
-      console.log("Empty");
       b = document.createElement("DIV");
       b.innerHTML += "No results found";
       a.appendChild(b);
